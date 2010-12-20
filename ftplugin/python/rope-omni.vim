@@ -12,7 +12,7 @@ endif
 
 python << EOF
 import ropevim, ropemode.interface
-import rope.base.exceptions.BadIdentifierError
+import rope.base.exceptions
 
 class RopeOmniCompleter(object):
     """ The class used to complete python code. """
