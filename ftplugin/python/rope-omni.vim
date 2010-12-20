@@ -12,7 +12,6 @@ endif
 
 python << EOF
 import ropevim, ropemode.interface
-import rope.base.exceptions
 
 class RopeOmniCompleter(object):
     """ The class used to complete python code. """
@@ -48,7 +47,7 @@ class RopeOmniCompleter(object):
 
         try:
             proposals = self.assist._calculate_proposals()
-        except rope.base.exceptions.BadIdentifierError:
+        except Exception: # a bunch of rope stuff
             return []
 
         ps = [self._get_dict(p) for p in proposals]
