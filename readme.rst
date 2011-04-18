@@ -22,4 +22,4 @@ not using something like that, just place the files in the appropriate
 directory in your ``~/.vim`` directory.
 
 Once installed, you can enable it by putting something like this in your ``.vimrc``::
-    autocmd FileType python set omnifunc=RopeCompleteFunc
+    autocmd FileType python setlocal omnifunc=RopeCompleteFunc
